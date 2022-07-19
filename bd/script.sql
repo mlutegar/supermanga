@@ -1,6 +1,13 @@
 create database if not exists supermanga;
 use supermanga;
 
+create or replace table favorite(
+    favorite_id int primary key auto_increment, 
+    favorite_by int not null, 
+    created_at TIMESTAMP not null default CURRENT_TIME, 
+    CONSTRAINT FK_UserID FOREIGN KEY (favorite_by) REFERENCES login(id) on delete cascade
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 create or replace table manga(
     id int primary key auto_increment,
     titulo varchar(250) not null,
@@ -14,16 +21,9 @@ create or replace table manga(
     nota int not null,
     acesso int not null,
     my_favorite_id int not null,
-    created_at TIMESTAMP not null default CURRENT_TIMESTAMP
+    created_at TIMESTAMP not null default CURRENT_TIMESTAMP,
     CONSTRAINT FK_FavoriteID FOREIGN KEY (my_favorite_id) REFERENCES favorite(favorite_id) on delete cascade
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1; 
-
-create or replace table favorite(
-    favorite_id int primary key auto_increment, 
-    favorite_by int not null, 
-    created_at TIMESTAMP not null default CURRENT_TIME, 
-    CONSTRAINT FK_UserID FOREIGN KEY (favorite_by) REFERENCES login(id) on delete cascade
-    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 create or replace table login(
     id int primary key auto_increment,
