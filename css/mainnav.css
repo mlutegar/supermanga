@@ -1,0 +1,141 @@
+.mainnav{
+    background: darkslategrey;
+    height: 60px;
+    width: 100%;
+}
+
+.logo{
+    margin: 50px 30px;
+}
+
+.mainnav table{
+    float: right;
+}
+
+.mainnav table tr th{
+    display: inline-block;
+    line-height: 53px;
+    margin: 0 10px;
+}
+
+.mainnav table tr th a{
+    color: lightgray;
+    font-size: 13px;
+    padding: 2px 13px;
+    text-transform: uppercase;
+}
+
+.mainnav table tr th:hover{
+    border-bottom: 2px lightgrey solid;
+    transition: .5s;
+    background-color: rgb(57, 95, 95);
+}
+
+.check_btn{
+    font-size: 30px;
+    color: lightgrey;
+    float: left;
+    line-height: 60px;
+    margin: 0px 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.search_btn{
+    font-size: 30px;
+    color: lightgrey;
+    line-height: 60px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+#search{
+    display: none;
+}
+
+.user_btn{
+    font-size: 30px;
+    color: lightgrey;
+    line-height: 60px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+#user{
+    display: none;
+}
+
+.right_elements{
+    float: right;
+}
+
+
+.user
+{
+    left: -100%;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: darkslategrey;
+    top: 80px;
+
+    text-align: center;
+    transition: all .5s;
+}
+
+#user:checked ~ * #login_form{
+    left: 0%;
+}
+
+@media (max-width: 952px){
+    .mainnav table tr th li {
+        font-size: 2px;
+    }
+}
+
+@media (max-width: 858px){
+    .check_btn{
+        display: block;
+    }
+
+    #options
+    {
+        position: fixed;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: darkslategrey;
+        top: 80px;
+  
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .mainnav table tr th a{
+        color: lightgray;
+        font-size: 20px;
+        padding: 2px 13px;
+        text-transform: uppercase;
+    }
+
+    .mainnav table tr th li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .mainnav table tr th li a{
+        font-size: 20px;
+    }
+
+    a:active, a:hover{
+        background: none;
+        color: lightblue;
+    }
+
+    #check:checked ~ * #options{
+        left: 0;
+    }
+}
