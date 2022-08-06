@@ -6,6 +6,7 @@ Esse é um site de visualização e download de mangas.
 # Tecnologias utilizadas
 ## Front-end
 - HTML
+- CSS
 ## Back-end
 - PHP
 ## Banco de dados
