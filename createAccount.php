@@ -1,11 +1,16 @@
-<?php include('config.php');?>
+<?php 
+
+include('config.php');
+require_once('repository/loginrepository.php');
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width ,initial-scale=1">
     <script src="https://kit.fontawesome.com/7c9e86ad48.js" crossorigin="anonymous"></script>  
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 
@@ -17,27 +22,35 @@
     <main>
         <div id="form-rect">
             <div class="create_acc">
-                <form action="" method="post" class="loginform">
-                    <label>Nome <br><input type="text" placeholder="Informe o seu nome" required></label>
-                    <br>
-                    <label>Idade <br><input type="number" placeholder="Informe a sua idade" required></label>
-                    <br>
-                    <svg id="image" width="200" height="200">
-                    <rect width="200" height="200" style="fill:rgba(100,100,100, 40);stroke-width: 3;stroke:rgb(0, 0, 0);" />
-                    </svg>
-                    <br>
-                    <label>Foto <input id="create-photo" type="file" required></label>
-                    <br>
-                    <label for="email">Email </label>
-                    <input type="email" name="email" id="create-email" placeholder="Informe o seu e-mail" required>
-                    <br>
-                    <label for="password">Senha </label>
-                    <input type="password" name="password" id="create-password" placeholder="Informe a sua senha" required>
-                    <br>                
-                    <button class="submit-btn" type="submit">Criar uma conta</button>
-                </form>
-                <a href="login.php"><button class="submit-btn">Já tenho conta</button>
-            </div>
+            <legend>Cadastro de usuário</legend>
+            <form action="cadastraUser.php" method="post" class="form">
+                <div class="mb-3 form-group">
+                    <label for="emailId" class="form-label">E-mail</label>
+                    <input type="email" name="email" id="emailId" class="form-control" placeholder="Informe o e-mail">
+                    <div id="helperEmail" class="form-text">Informe o e-mail</div>
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="senhaId" class="form-label">Usuário</label>
+                    <input type="text" name="user" id="userId" class="form-control" placeholder="Informe o seu nome de usúario">
+                    <div id="helperUser" class="form-text">Informe o seu nome de usuário</div>
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="ageId" class="form-label">Idade</label>
+                    <input type="text" name="age" id="ageId" class="form-control" placeholder="Informe a sua idade">
+                    <div id="helperAge" class="form-text">Informe a sua idade</div>
+                </div>
+                <div class="mb-3 form-group">
+                    <label for="senhaId" class="form-label">Senha</label>
+                    <input type="password" name="senha" id="senhaId" class="form-control" placeholder="Informe a senha">
+                </div>
+ 
+                <div class="d-grid gap-2 d-md-block">
+                  <button type="submit" class="btn btn-dark">Enviar</button>
+                  <a href="login.php"> <button> Já tem conta?</a> </button>
+                </div>
+                <div id="notify" class="form-text text-capitalize fs-4"><?= isset($_COOKIE['notify']) ? $_COOKIE['notify'] : '' ?></div>
+            </form>
+
         </div>
     </main>
 
