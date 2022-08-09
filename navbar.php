@@ -10,9 +10,9 @@
 
     <nav class="nav" id="navmenu">
         <ul class="nav__links">
-            <li><a href="#">Mangás</a></li>
+            <li><a href="vitrine.php">Mangás</a></li>
             <li><a href="#">Categorias</a></li>
-            <li><a href="#">Fale conosco</a></li>
+            <li><a href="fale_conosco.php">Fale conosco</a></li>
         </ul>
     </nav>
 
@@ -35,8 +35,11 @@
                 <a href="#"><img class="iconlogin" src="img/login.png" alt="" width="30" height="30"></a>
 
                 <div class="dropdown-content">
-                    <a class="logout" href="logout.php">Logout</a>
-                    <a class="logout" href="formulario-cadastro-manga.php">Cadastrar manga</a>
+                    <ul>
+                        <li><a class="logout" href="logout.php">Logout</a></li>
+                        <li><a class="logout" href="formulario-cadastro-manga.php">Cadastrar manga</a></li>                
+                        <li><a class="logout" href="user.php?id=<?= $user->id?>">Páginar usuario</a></li>
+                    </ul>
                 </div>
             </div>
         <?php endif ?>
