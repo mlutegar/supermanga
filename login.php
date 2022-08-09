@@ -16,7 +16,7 @@
 
     <main>
 
-        <div id="form-rect" style="background-color: #838383;">
+        <div id="form-rect"">
             <div id="login">
                 <form action="loginSistema.php" method="post" class="loginform">
                     <p style="font-size: 50px; margin-bottom: 20px;">Login</p>

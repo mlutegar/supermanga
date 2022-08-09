@@ -1,25 +1,26 @@
 #form-rect{
-    background-color: #24252a;
     padding: 20px;
     width: 90%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 60px;
     display: flexbox;
     font-size: 30px;
     background-color:  #838383;
     font-family: "Montserrat", sans-serif;
+    border-radius: 0px 8px 8px 8px;
+    box-shadow: 6px 10px 14px -2px #000;
 }
 
 .submit-btn{
     background-color: #edf0f1;
-    color: #24252a;
+    color: black;
     border: none;
     display: flex;
     margin: auto;
     padding: 5px 10px;
     margin-top: 20px;
-    width: auto !important;
-    height: auto !important;
+    width:fit-content !important;
+    height: fit-content;
 }
 
 #form-rect input, #my-text{

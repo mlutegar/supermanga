@@ -10,7 +10,7 @@
 </head>
 
 <body> 
-    <?php include("navbar.php")?>
+
 
     <div class="banner"></div>
 
@@ -54,8 +54,7 @@
                 <!--FIM DO LOOP-->
             </div>
         </div>
-  
+    </div>
     </main>
 
-<?php include('footer.php') ?></body>
 </html>

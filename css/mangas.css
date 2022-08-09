@@ -1,6 +1,16 @@
-#search-bar{
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    width:100%;
     background-color: #24252a;
-    width: 80%;
+    
+}
+
+#search-bar{
+    width: 70%;
     margin: auto;
     margin-top: 60px;
     display: inline-flexbox;
@@ -18,12 +28,12 @@
 #search-text{
     padding-top: 10px;
     width: 90%;
-    height: 25px;
+    height: 15px;
 }
 
 #search-btn{
     width: 9%;
-    height: 25px;
+    height: 29px;
 }
 
 #form-rect input, #my-text{
@@ -35,10 +45,14 @@
 
 
 #mangas{
-    width: 80%;
+    background-color: #838383;
+    border-radius: 0px 8px 8px 8px;
+    box-shadow: 6px 10px 14px -2px #000;
+    padding: 20px;
+    width: 70%;
     margin: auto;
     margin-top: 60px;
-    display:flexbox;
+    display:flex;
     font-size: 13px;
     color: #edf0f1;
     font-family: "Montserrat", sans-serif;
@@ -55,11 +69,17 @@ padding: 0 20px;
 
 #manga-information-section{
 float: right;
-width: 79%;
+width: 69%;
 }
 
 #manga-information h1{
  width: 100%;
+ color: black;
+}
+
+#sinopse{
+    color: black;
+    font-family: "Montserrat", sans-serif;
 }
 
 #manga-additional-info{
@@ -71,6 +91,7 @@ width: 79%;
 }
 
 #additional-info p{
+    font-family: "Montserrat", sans-serif;
     color: black;
     border: black solid 1px;
     font-size: 15px;
@@ -81,8 +102,3 @@ width: 79%;
     padding: 6px;
     background-color: white;
 }
-
-
-
-
-
