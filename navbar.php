@@ -36,6 +36,7 @@
 
                 <div class="dropdown-content">
                     <a class="logout" href="logout.php">Logout</a>
+                    <a class="logout" href="formulario-cadastro-manga.php">Cadastrar manga</a>
                 </div>
             </div>
         <?php endif ?>
