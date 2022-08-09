@@ -1,0 +1,2 @@
+    my_favorite_id int not null default "none",
+    CONSTRAINT FK_FavoriteID FOREIGN KEY (my_favorite_id) REFERENCES favorite(favorite_id) on delete cascade
