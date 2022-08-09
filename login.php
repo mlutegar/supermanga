@@ -16,9 +16,10 @@
 
     <main>
 
-        <div id="form-rect">
-            <div class="login">
+        <div id="form-rect" style="background-color: #838383;">
+            <div id="login">
                 <form action="loginSistema.php" method="post" class="loginform">
+                    <p style="font-size: 50px; margin-bottom: 20px;">Login</p>
                     <label for="email">Email </label><br>
                     <input type="email" name="login-email" id="email" placeholder="Informe o seu e-mail">
                     <br>
@@ -29,9 +30,10 @@
                 </form>
             </div>
             <br>
-            <div class="create_acc">
+            <div id="create_acc">
                 <form action="" method="post" class="loginform">
 
+                    <p style="font-size: 50px; margin-bottom: 20px;">Criar Conta</p>
                     <label>Nome <br><input type="text" placeholder="Informe o seu nome" required></label>
                     <br>
                     <label>Idade <br><input type="number" placeholder="Informe a sua idade" required></label>
@@ -54,5 +56,5 @@
         </div>
     </main>
 
-<?php include('footer.php') ?></body>
+<!--<?php include('footer.php') ?></body>-->
 </html>
