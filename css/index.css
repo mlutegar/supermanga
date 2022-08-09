@@ -1,0 +1,83 @@
+.vitrine-acesso{
+    width: 100%;
+    height: 400px;
+    margin-top: 4%;
+}
+
+.title-vitrine{
+    width: 92%;            
+    height: 50px;    
+    margin: auto;
+}
+
+.title{
+    background-color: #353535;
+    width: 14%;
+    height: 100%;
+    box-shadow: 8px 0px 8px -2px #000;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.title p{
+    font-size: 18px;
+    padding: 12px;
+    color: #edf0f1;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+.sub-vitrine{
+    background-color: #838383;
+    width: 92%;
+    height: 85%;
+    border-radius: 0px 8px 8px 8px;
+    box-shadow: 6px 10px 14px -2px #000;
+    margin: auto;
+}
+
+.mangas-vitrine{
+    height: 300px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.caixa-manga5{
+    margin-top: 30px;
+    width: 18%;
+    height: 290px;
+    margin-left: 2%;
+}
+
+.caixa-manga4{
+    margin-top: 30px;
+    width: 23%;
+    height: 290px;
+    margin-left: 2%;
+}
+
+
+.capa-manga{
+    height: 70%;
+    width: 180px;
+    margin: auto;
+}
+
+.item-manga{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.vitrine-lancamento{
+    margin-top: 2%;
+    width: 100%;
+    height: 1000px;
+}
+
+.cropped{
+    width: 150px; 
+    height: 200px; 
+    object-fit: cover;
+    border: 4px solid black;
+}
