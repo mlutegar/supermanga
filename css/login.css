@@ -1,12 +1,13 @@
 #form-rect{
+    background-color: #24252a;
     padding: 20px;
+    max-width: 350px;
     margin: auto;
     margin-top: 40px;
-    display: flex;
+    display: flexbox;
     font-size: 30px;
-    color: black;
+    color: #edf0f1;
     font-family: "Montserrat", sans-serif;
-    background-color: #838383;;
 }
 
 .submit-btn{
@@ -17,12 +18,12 @@
     margin: auto;
     padding: 5px 10px;
     margin-top: 20px;
-    width: auto ;
-    height: auto;
+    width: auto !important;
+    height: auto !important;
 }
 
 #create-photo{
-    height: auto ;
+    height: auto !important;
 }
 
 #form-rect input{
@@ -38,8 +39,4 @@
     margin-top: 30px;
 }
 
-#form-section-title{
-    font-size: 6px;
-    margin-bottom: 5px ;
-}
 
