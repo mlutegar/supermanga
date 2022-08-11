@@ -40,7 +40,8 @@
                     <ul>
                         <li><a class="logout" href="logout.php">Logout</a></li>
                         <li><a class="logout" href="formulario-cadastro-manga.php">Cadastrar manga</a></li>   
-                        <li><a class="logout" href="user.php?id=<?= $user->id?>">Páginar usuario</a></li>                                                
+                        <li><a class="logout" href="user.php?id=<?= $user->id?>">Páginar usuario</a></li>
+                        <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='logout' href='logout.php'>Administrador</a></li>" ?>                                              
                     </ul>
                 </div>
             </div>
