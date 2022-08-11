@@ -61,7 +61,7 @@
                     <?php  $qnt = 0; foreach(array_reverse(fnListMangas()) as $manga): ?>
                         <div class="caixa-manga4">
                             <div class="capa-manga-lancamentos">
-                                <a href="mangaDetalhe.php?id=<?= $manga->id?>"><img class="cropped-lancamentos" src="<?=$manga->capa?>"></a>
+                                <a href="manga_details.php?id=<?= $manga->id?>"><img class="cropped-lancamentos" src="<?=$manga->capa?>"></a>
                             </div>
                             <div class="item-manga"><?= $manga->titulo?></div>
                             <div class="item-manga"><a href="<?= $manga->conteudo?>">Baixe aqui</a></div>

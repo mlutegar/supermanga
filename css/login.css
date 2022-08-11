@@ -21,6 +21,10 @@
     height: auto !important;
 }
 
+.submit-btn:hover{
+    background-color: #878c94;
+}
+
 #create-photo{
     height: auto !important;
 }

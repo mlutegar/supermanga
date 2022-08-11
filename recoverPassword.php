@@ -10,9 +10,9 @@
     $novaSenha = sha1(uniqid('senac_') . date('Y-m-d H:i'));
 
     if(fnAtualizaSenha($email, $novaSenha)) {
-        $usuario = new stdClass();
-        $usuario->email = $email;
-        $usuario->senha = $novaSenha;
+        $login = new stdClass();
+        $login->email = $email;
+        $login->senha = $novaSenha;
 
-        send($usuario);
+        send($login);
     }

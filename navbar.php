@@ -10,9 +10,9 @@
 
     <nav class="nav" id="navmenu">
         <ul class="nav__links">
-            <li><a href="vitrine.php">Mangás</a></li>
+            <li><a href="mangas.php">Mangás</a></li>
             <li><a href="#">Categorias</a></li>
-            <li><a href="fale_conosco.php">Fale conosco</a></li>
+            <li><a href="message_us.php">Fale conosco</a></li>
         </ul>
     </nav>
 
@@ -39,9 +39,9 @@
                 <div class="dropdown-content">
                     <ul>
                         <li><a class="logout" href="logout.php">Logout</a></li>
-                        <li><a class="logout" href="formulario-cadastro-manga.php">Cadastrar manga</a></li>   
+                        <li><a class="logout" href="create_manga.php">Cadastrar manga</a></li>   
                         <li><a class="logout" href="user.php?id=<?= $user->id?>">Páginar usuario</a></li>
-                        <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='logout' href='logout.php'>Administrador</a></li>" ?>                                              
+                        <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='logout' href='admin.php'>Administrador</a></li>" ?>                                              
                     </ul>
                 </div>
             </div>

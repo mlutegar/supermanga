@@ -12,7 +12,7 @@
   <body><?php include("navbar.php");?>
     <div>
         <div>
-            <form action="registraManga.php" method="post" enctype="multipart/form-data">
+            <form action="createManga.php" method="post" enctype="multipart/form-data">
               <div>
 
                 <svg width="100%" height="360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Capa" preserveAspectRatio="xMidYMid slice" focusable="false">

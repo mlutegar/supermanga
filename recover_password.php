@@ -16,7 +16,7 @@
     <main>
     <div id="form-rect">
         <div id="esqueceu-senha">
-            <form action="recupera-senha.php" method="post" id="form">
+            <form action="recoverPassword.php" method="post" id="form">
                 <div class="mb-3 form-group">
                     <label>E-mail <input type="email" name="email" id="emailId" placeholder="Informe o e-mail"></label>
                 </div>
@@ -25,7 +25,7 @@
                     <input onclick="window.location='login.php'" type="button" class="submit-btn" value="Voltar ao login">
                 </div>
                 <?php if(isset($_COOKIE['notify'])) : ?>
-                <div id="notify" class="form-text text-capitalize text"><?= $_COOKIE['status'] ?> fs-4"><?= $_COOKIE['notify'] ?></div>
+                <div id="notify" class="form-text> <?= $_COOKIE['status']?><?= $_COOKIE['notify'] ?></div>
                 <?php endif; ?>
             </form>
         </div>

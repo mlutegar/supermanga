@@ -17,8 +17,9 @@ h1{
 .banner{
   background-image: url(../img/wallpapper.jpg);
   width: 100%;
-  height: 500px;
-  border: 2px solid black;
+  height: 300px;
+  background-position: center;
+  border: 2px solid black
 }
   
 .overlay {
@@ -62,6 +63,14 @@ h1{
     right: 45px;
     font-size: 60px;
     color: #edf0f1;
+  }
+
+  @media only screen and (max-width: 740px) {
+    .banner{
+      background-image: url(../img/wallpapper_phone.jpg);
+      height: 200px;
+    }
+    
   }
   
   @media screen and (max-height: 450px) {

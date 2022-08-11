@@ -1,56 +1,21 @@
-<?php 
+<?php
+    session_start();
 
-include('config.php');
-require_once('repository/loginrepository.php');
+    require_once('repository/LoginRepository.php');
 
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width ,initial-scale=1">
-    <script src="https://kit.fontawesome.com/7c9e86ad48.js" crossorigin="anonymous"></script>  
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="css/login.css">
-</head>
+    $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+    $user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_SPECIAL_CHARS);
+    $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_NUMBER_INT);
 
-<body> 
-    <?php include("navbar.php")?>
+    if(fnAddUser($user, $age, $email, $senha)) {
+            $msg = "";
+        } else {
+            $msg = "Preencha todos os campos corretamente";
+        }
 
-    <div class="banner"></div>
-
-    <main>
-        <div id="form-rect">
-            <h1>Criar conta</h1>
-
-            <div id="create_acc">
-            <form action="cadastraUser.php" method="post" id="form">
-                <div>
-                    <label for="emailId" class="form-label">E-mail</label>
-                    <input type="email" name="email" id="emailId" class="form-control" placeholder="Informe o e-mail">
-                </div>
-                <div>
-                    <label for="senhaId" class="form-label">Usuário</label>
-                    <input type="text" name="user" id="userId" class="form-control" placeholder="Informe o seu nome de usúario">
-                </div>
-                <div>
-                    <label for="ageId" class="form-label">Idade</label>
-                    <input type="text" name="age" id="ageId" class="form-control" placeholder="Informe a sua idade">
-                </div>
-                <div>
-                    <label for="senhaId" class="form-label">Senha</label>
-                    <input type="password" name="senha" id="senhaId" class="form-control" placeholder="Informe a senha">
-                </div>
- 
-                <div>
-                    <input type="submit" class="submit-btn" value="Criar conta">
-                  <input onclick="window.location='login.php'" type="button" class="submit-btn" value="Já tem conta?">
-                </div>
-                <div id="notify" class="form-text text-capitalize fs-4"><?= isset($_COOKIE['notify']) ? $_COOKIE['notify'] : '' ?></div>
-            </form>
-
-        </div>
-    </main>
-
-<?php include('footer.php') ?></body>
-</html>
+    $page = "login.php";
+    setcookie('notify', $msg, time() + 10, "supermanga/{$page}", 'localhost');
+    header("location: {$page}");
+    exit;

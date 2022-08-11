@@ -17,7 +17,7 @@
     <main>
         <div id="form-rect">
             <div id="login">
-                <form id="form" action="loginSistema.php" method="post" class="loginform">
+                <form id="form" action="systemLogin.php" method="post" class="loginform">
                     <h1>Login</h1>
 
                     <label for="email">Email </label><br>
@@ -29,8 +29,8 @@
                     <input class="submit-btn" type="submit" value="Acessar">
                 </form>
                 <hr>
-                <input onclick="window.location='createAccount.php'" type="button" class="submit-btn" value="Criar conta">
-                <input onclick="window.location='esqueceu-senha.php'" type="button" class="submit-btn" value="Esqueceu a senha?">
+                <input onclick="window.location='create_account.php'" type="button" class="submit-btn" value="Criar conta">
+                <input onclick="window.location='recover_password.php'" type="button" class="submit-btn" value="Esqueceu a senha?">
             </div>
     </main>
 

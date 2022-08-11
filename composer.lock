@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd5b26df85b14b806d8c3dda9480bafd",
+    "content-hash": "5249180921852857fc1cd8349abef1c4",
     "packages": [
         {
             "name": "phpmailer/phpmailer",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "21c5651c70ff8b8ddafa99ddf1f8c84a4138f727"
+                "reference": "fadcb6abe19c68b713ff816f1394f3d083d9f8c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/21c5651c70ff8b8ddafa99ddf1f8c84a4138f727",
-                "reference": "21c5651c70ff8b8ddafa99ddf1f8c84a4138f727",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/fadcb6abe19c68b713ff816f1394f3d083d9f8c6",
+                "reference": "fadcb6abe19c68b713ff816f1394f3d083d9f8c6",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-07-25T07:32:02+00:00"
+            "time": "2022-08-11T11:32:11+00:00"
         }
     ],
     "packages-dev": [],

@@ -1,16 +1,21 @@
 {
-    "name": "mainsmago/supermanga",
-    "description": "Um projeto com PHP feito para um site de mangá.",
+    "name": "joaolucas/supermanga",
+    "description": "página de upload de mangas",
     "type": "project",
-    "require": {
-        "phpmailer/phpmailer": "dev-master"
-    },
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Joaolucas\\Supermanga\\": "src/"
+        }
+    },
     "authors": [
         {
-            "name": "cadupomu",
-            "email": "caducando1991@gmail.com"
+            "name": "LucneSun",
+            "email": "joaolucasarasolaire@gmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    }
 }

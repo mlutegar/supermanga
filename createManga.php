@@ -41,7 +41,7 @@
         }
     }
 
-    $page = "formulario-cadastro-manga.php";
+    $page = "create_manga.php";
     setcookie('notify', $msg, time() + 10, "supermanga/{$page}", 'localhost');
     header("location: {$page}");
     exit;

@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width ,initial-scale=1">
     <script src="https://kit.fontawesome.com/7c9e86ad48.js" crossorigin="anonymous"></script>  
     <title>Mangás</title>
-    <link rel="stylesheet" href="css/vitrine.css">
+    <link rel="stylesheet" href="css/mangas.css">
 </head>
 
 <body> <?php include("navbar.php")?>
@@ -27,7 +27,7 @@
         <div id="mangas">            
             <div id="card-manga">
                 <div id="manga-cover">
-                    <a href="mangaDetalhe.php?id=<?= $manga->id?>"><img class="cropped-vitrine" src="<?= $manga->capa?>" alt=""></a>
+                    <a href="manga_details.php?id=<?= $manga->id?>"><img class="cropped-vitrine" src="<?= $manga->capa?>" alt=""></a>
                 </div>
                 <div id="manga-information-section">
                     <div id="manga-information">

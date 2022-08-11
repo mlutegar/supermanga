@@ -9,7 +9,7 @@
 
     if(!$_SESSION['login'] = fnLogin($email, $password)) {
         session_destroy();
-        $page = "errorPage.php";
+        $page = "error_page.php";
         $expire = (time()+10);
 
         setcookie('notify', 'Falha ao efetuar o login', $expire, '/supermanga/errorPage.php', 'localhost', isset($_SERVER['HTTPS']), true);
