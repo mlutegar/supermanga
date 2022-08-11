@@ -18,7 +18,7 @@
 
     <div class="nav" id="navsearch">
         
-        <div id="search-box" class="search-box">
+        <div class="search-box">
             <form id="formSearchTitulo" role="search" method="post" action="localiza-manga.php">
                 <input id="searchTitulo" class="search-txt" type="search" name="titulo" placeholder="Faça sua pesquisa" aria-label="Search">
             </form>
