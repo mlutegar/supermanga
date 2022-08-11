@@ -19,7 +19,9 @@
     <div class="nav" id="navsearch">
         
         <div id="search-box" class="search-box">
-            <input class="search-txt" type="text" name="" placeholder="Faça sua pesquisa">
+            <form id="formSearchTitulo" role="search" method="post" action="localiza-manga.php">
+                <input id="searchTitulo" class="search-txt" type="search" name="titulo" placeholder="Faça sua pesquisa" aria-label="Search">
+            </form>
             <a class="search-btn" href="#">
                 <img src="img/lupa.png" alt="" width="25" height="25">
             </a>
@@ -37,8 +39,8 @@
                 <div class="dropdown-content">
                     <ul>
                         <li><a class="logout" href="logout.php">Logout</a></li>
-                        <li><a class="logout" href="formulario-cadastro-manga.php">Cadastrar manga</a></li>                
-                        <li><a class="logout" href="user.php?id=<?= $user->id?>">Páginar usuario</a></li>
+                        <li><a class="logout" href="formulario-cadastro-manga.php">Cadastrar manga</a></li>   
+                        <li><a class="logout" href="user.php?id=<?= $user->id?>">Páginar usuario</a></li>                                                
                     </ul>
                 </div>
             </div>

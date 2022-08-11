@@ -26,17 +26,23 @@
 
         <div class="sub-vitrine" id="maisacessados">
             <div class="mangas-vitrine">
-                <?php foreach(fnListMangas() as $manga): ?>
+                <?php $qnt = 0; foreach(fnListMangas() as $manga): ?>
                     <div class="caixa-manga5">
                         <div class="capa-manga">
-                            <img class="cropped" src="<?=$manga->capa?>">
+                            <a href="mangaDetalhe.php?id=<?= $manga->id?>"><img class="cropped" src="<?=$manga->capa?>"></a>
                         </div>
                         <div class="item-manga"><?= $manga->titulo?></div>
                         <div class="item-manga">
-                            <a href="<?= $manga->conteudo?>">BAIXE AQUI</a>
+                            <a href="<?= $manga->conteudo?>">Baixe aqui</a>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php 
+                    $qnt++;
+                    if ($qnt == 5) {
+                        break;
+                    }
+                endforeach;
+                ?>
             </div>
         </div>
     </div>
@@ -48,27 +54,32 @@
             </div>
         </div>
         
-        <div class="sub-vitrine" id="maisacessados">
+        <div class="sub-vitrine">
             <br><br><br><br><br>
-            <?php for ($i=0; $i < 2; $i++) { ?>
+
                 <div class="mangas-vitrine">
-                    <?php  $qnt = 0; foreach(fnListMangas() as $manga): ?>
+                    <?php  $qnt = 0; foreach(array_reverse(fnListMangas()) as $manga): ?>
                         <div class="caixa-manga4">
-                            <div class="capa-manga">
-                                <img class="cropped" src="<?=$manga->capa?>">
+                            <div class="capa-manga-lancamentos">
+                                <a href="mangaDetalhe.php?id=<?= $manga->id?>"><img class="cropped-lancamentos" src="<?=$manga->capa?>"></a>
                             </div>
                             <div class="item-manga"><?= $manga->titulo?></div>
-                            <div class="item-manga"><?= $manga->titulo?></div>
+                            <div class="item-manga"><a href="<?= $manga->conteudo?>">Baixe aqui</a></div>
                         </div>
                     <?php 
                         $qnt++; 
-                        if ($qnt == 4) {
+                        if ($qnt == 4) {?>             
+                            </div> <br><br><br><br><br><br><br>
+                            <div class="mangas-vitrine">
+                        <?php 
+                        }?>
+
+                        <?php if ($qnt == 8) {
                             break;
                         }
                         endforeach; 
                     ?>
                 </div>
-            <?php } ?>
         </div>  
     </div>
 

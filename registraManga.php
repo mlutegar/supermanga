@@ -14,7 +14,7 @@
     $conteudo = $_FILES['conteudo']['tmp_name'];
     $conteudo_name = "{$titulo}.zip";
 
-    $dirAbs = "C:/xampp/htdocs/projeto/Senac/Projeto Integrador/HQsDemais/upload/";
+    $dirAbs = "C:/xampp/htdocs/projeto/Senac/Integrative Project/projeto/upload";
     $dirRel = "upload/";
     $pathAbs = $dirAbs.$conteudo_name;
     $pathRel = $dirRel.$conteudo_name;

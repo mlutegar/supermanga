@@ -18,8 +18,6 @@ $user = fnLocalizaUserPorId($id);
 
 <body> <?php include("navbar.php")?>
 
-    <div class="banner"></div>
-
     <div class="rect">
     <fieldset>
                 <div class="card col-4 offset-4 text-center">
@@ -43,8 +41,6 @@ $user = fnLocalizaUserPorId($id);
                 <div id="notify" class="form-text text-capitalize fs-4"><?= isset($_COOKIE['notify']) ? $_COOKIE['notify'] : '' ?></div>
         </fieldset>
     </div>
-
-
 
 <?php include('footer.php') ?></body>
 </html>

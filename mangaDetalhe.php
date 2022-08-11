@@ -10,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mangaDetalhe.css">
     <title>Document</title>
 </head>
 <body><?php include('navbar.php'); ?>
@@ -26,7 +27,6 @@
                 <p><strong>Nome do Manga:</strong><?= $manga->titulo ?></p><br><hr><br>
                 <p><strong>Anime:</strong> <?= $manga->anime ?></p><br><hr><br>
                 <p><strong>Volume:</strong> <?= $manga->volume ?></p><br><hr><br>
-                <p><strong>Autor:</strong> <?= $manga->autor ?></p><br><hr><br>
                 <p><strong>Categoria:</strong> <?= $manga->categoria ?></p><br><hr><br>
                 <p><strong>Sumario:</strong>  <?= $manga->sumario ?></p><br><hr><br>
 

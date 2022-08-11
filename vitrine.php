@@ -1,6 +1,7 @@
 <?php 
     include('config.php');
     require_once('repository/MangaRepository.php');
+    $titulo = filter_input(INPUT_GET, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
 ?>
 
 <!DOCTYPE html>
@@ -16,18 +17,17 @@
 <body> <?php include("navbar.php")?>
 
     <div id="search-bar">
-        <form method="post" action="">
-            <input id="search-text" type="text" placeholder="Procure pelo nome do mangá">
+        <form id="formSearchTitulo" role="search" method="post" action="localiza-manga.php">
+            <input id="search-text" type="search" name="titulo" placeholder="Procure pelo nome do mangá">
             <button id="search-btn"><img src="img/lupa.png" width="20px" height="20px" alt=""></button>
         </form>
     </div>
 
-    <?php foreach(fnListMangas() as $manga): ?>
-        <div id="mangas">
-            
+    <?php foreach(fnLocalizaMangaPorTitulo($titulo) as $manga): ?>
+        <div id="mangas">            
             <div id="card-manga">
                 <div id="manga-cover">
-                    <img class="cropped-vitrine" src="<?= $manga->capa?>" alt="">
+                    <a href="mangaDetalhe.php?id=<?= $manga->id?>"><img class="cropped-vitrine" src="<?= $manga->capa?>" alt=""></a>
                 </div>
                 <div id="manga-information-section">
                     <div id="manga-information">
