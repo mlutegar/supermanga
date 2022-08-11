@@ -16,18 +16,21 @@
 
     <main>
         <div id="form-rect">
-            <div class="login">
-                <form action="loginSistema.php" method="post" class="loginform">
+            <div id="login">
+                <form id="form" action="loginSistema.php" method="post" class="loginform">
+                    <h1>Login</h1>
+
                     <label for="email">Email </label><br>
                     <input type="email" name="email" id="email" placeholder="Informe o seu e-mail">
                     <br>
                     <label for="password">Senha </label><br>
                     <input type="password" name="password" id="password" placeholder="Informe a sua senha">
                     <br>
-                    <button class="submit-btn" type="submit">Acessar</button>
+                    <input class="submit-btn" type="submit" value="Acessar">
                 </form>
-                <a href="createAccount.php"><button class="submit-btn">Criar conta</button></a>
-                <a href="esqueceu-senha.php"><button class="submit-btn">Esqueceu a senha?</button></a>
+                <hr>
+                <input onclick="window.location='createAccount.php'" type="button" class="submit-btn" value="Criar conta">
+                <input onclick="window.location='esqueceu-senha.php'" type="button" class="submit-btn" value="Esqueceu a senha?">
             </div>
     </main>
 

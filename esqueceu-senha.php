@@ -1,4 +1,3 @@
-<?php require_once('repository/LoginRepository.php'); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,24 +14,21 @@
     <div class="banner"></div>
 
     <main>
-    <div class="col-6 offset-3">
-    <fieldset>
-            <legend>Recupera senha</legend>
-            <form action="recupera-senha.php" method="post" class="form">
+    <div id="form-rect">
+        <div id="esqueceu-senha">
+            <form action="recupera-senha.php" method="post" id="form">
                 <div class="mb-3 form-group">
-                    <label for="emailId" class="form-label">E-mail</label>
-                    <input type="email" name="email" id="emailId" class="form-control" placeholder="Informe o e-mail">
-                    <div id="helperEmail" class="form-text">Informe o e-mail</div>
+                    <label>E-mail <input type="email" name="email" id="emailId" placeholder="Informe o e-mail"></label>
                 </div>
                 <div class="d-grid gap-2 d-md-block">
-                  <button type="submit" class="btn btn-dark">Enviar</button>
-                  <a href="login.php">Fazer login</a>
+                    <input type="submit" class="submit-btn" value="Recuperar senha">
+                    <input onclick="window.location='login.php'" type="button" class="submit-btn" value="Voltar ao login">
                 </div>
                 <?php if(isset($_COOKIE['notify'])) : ?>
-                <div id="notify" class="form-text text-capitalize text-<?= $_COOKIE['status'] ?> fs-4"><?= $_COOKIE['notify'] ?></div>
+                <div id="notify" class="form-text text-capitalize text"><?= $_COOKIE['status'] ?> fs-4"><?= $_COOKIE['notify'] ?></div>
                 <?php endif; ?>
             </form>
-        </fieldset>
+        </div>
     </div>
     </main>
 

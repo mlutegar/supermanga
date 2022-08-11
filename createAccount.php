@@ -21,32 +21,30 @@ require_once('repository/loginrepository.php');
 
     <main>
         <div id="form-rect">
-            <div class="create_acc">
-            <legend>Cadastro de usuário</legend>
-            <form action="cadastraUser.php" method="post" class="form">
-                <div class="mb-3 form-group">
+            <h1>Criar conta</h1>
+
+            <div id="create_acc">
+            <form action="cadastraUser.php" method="post" id="form">
+                <div>
                     <label for="emailId" class="form-label">E-mail</label>
                     <input type="email" name="email" id="emailId" class="form-control" placeholder="Informe o e-mail">
-                    <div id="helperEmail" class="form-text">Informe o e-mail</div>
                 </div>
-                <div class="mb-3 form-group">
+                <div>
                     <label for="senhaId" class="form-label">Usuário</label>
                     <input type="text" name="user" id="userId" class="form-control" placeholder="Informe o seu nome de usúario">
-                    <div id="helperUser" class="form-text">Informe o seu nome de usuário</div>
                 </div>
-                <div class="mb-3 form-group">
+                <div>
                     <label for="ageId" class="form-label">Idade</label>
                     <input type="text" name="age" id="ageId" class="form-control" placeholder="Informe a sua idade">
-                    <div id="helperAge" class="form-text">Informe a sua idade</div>
                 </div>
-                <div class="mb-3 form-group">
+                <div>
                     <label for="senhaId" class="form-label">Senha</label>
                     <input type="password" name="senha" id="senhaId" class="form-control" placeholder="Informe a senha">
                 </div>
  
-                <div class="d-grid gap-2 d-md-block">
-                  <button type="submit" class="btn btn-dark">Enviar</button>
-                  <a href="login.php"> <button> Já tem conta?</a> </button>
+                <div>
+                    <input type="submit" class="submit-btn" value="Criar conta">
+                  <input onclick="window.location='login.php'" type="button" class="submit-btn" value="Já tem conta?">
                 </div>
                 <div id="notify" class="form-text text-capitalize fs-4"><?= isset($_COOKIE['notify']) ? $_COOKIE['notify'] : '' ?></div>
             </form>

@@ -30,7 +30,7 @@
 
     <div id="nav-account">
 
-        <?php if(!array_key_exists('login', $_SESSION) || empty(isset($_SESSION['login']))) : ?>
+        <?php if(empty(isset($_SESSION['login']))) : ?>
             <a class="cta" href="login.php">Login</a>
         <?php else: ?>
             <div class="dropdown">
