@@ -1,0 +1,16 @@
+{
+    "name": "mainsmago/supermanga",
+    "description": "Um projeto com PHP feito para um site de mangá.",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cadupomu",
+            "email": "caducando1991@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

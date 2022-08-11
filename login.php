@@ -27,6 +27,7 @@
                     <button class="submit-btn" type="submit">Acessar</button>
                 </form>
                 <a href="createAccount.php"><button class="submit-btn">Criar conta</button></a>
+                <a href="esqueceu-senha.php"><button class="submit-btn">Esqueceu a senha?</button></a>
             </div>
     </main>
 
