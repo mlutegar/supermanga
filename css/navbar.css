@@ -37,15 +37,15 @@ header {
 }
 
 .dropdown-content ul{
-list-style-type: none;
+  list-style-type: none;
 }
 
 .dropdown-content ul li{
-margin-top: 10px;
+  margin-top: 10px;
 }
 
 .dropdown:hover .dropdown-content {
-display: block;
+  display: block;
 }
 
 .cta,
