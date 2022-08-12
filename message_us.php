@@ -17,9 +17,8 @@
     <main>
         <div id="form-rect">
 
-            <form method="post" action="https://api.staticforms.xyz/submit">
+            <form method="post" action="sendMessageUsEmail">
                 <p style="font-size: 50px; margin-bottom: 20px;">Fale Conosco</p>
-                <input type="hidden" name="accessKey" value="2a04ce3e-16cd-45e3-be2b-79a1d0593742"> <!-- Required -->
 
                 <label>Nome <br><input type="text" placeholder="Informe o seu nome" name="name" required></label>
                 <br>
@@ -29,7 +28,6 @@
                 <br>
                 <label>Mensagem <br><textarea name="message" style="height: 300px;" rows="4" cols="50" style="font-size: 12pt" id="my-text">Escreva sua mensagem</textarea></label>
                 <br>
-                <input type="hidden" name="redirectTo" value="http://localhost/supermanga/message_us.php"> <!-- Optional -->
                 <input class="submit-btn" type="submit" value="Enviar">
             </form>
         </div>

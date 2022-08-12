@@ -37,15 +37,25 @@
     margin-top: 20px;
 }
 
+#sumarioId{
+    resize: none;
+    width: 100%;
+}
+
 #form-rect h1{
     text-align: center;
     margin-bottom: 50px;
 }
 
-#form-rect svg{
+#manga-cover{
     display: flex;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto;
+    align-self: center;
+    background-size:cover;
+    background-position: center;
+    width: 20%;
+    height: 300px;
+    padding: 0 20px;
 }
 
 
