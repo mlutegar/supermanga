@@ -7,69 +7,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Formulário Cadastro de Manga</title>
+    <<link rel="stylesheet" href="css/login.css">
   </head>
 
   <body><?php include("navbar.php");?>
     <div>
-        <div>
-            <form action="createManga.php" method="post" enctype="multipart/form-data">
-              <div>
+        <div id="form-rect">
+            <form id="create-manga" action="createManga.php" method="post" enctype="multipart/form-data">
+            <h1>Cadastrar manga</h1>
+              <div style="width: 100%;">
+                <img src="img/img1.png" id="manga-cover">
+              </div>
 
-                <svg width="100%" height="360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Capa" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Capa</text>
-                </svg>
+                    <label>Capa <input class="upload-btn" type="file" name="capa" id="capaId" required></label>
+                   <label>Manga<input class="upload-btn" type="file" name="conteudo" id="conteudoId" required></label>
 
-                <div>
-                  <div>
-                    <label for="capaId">Capa</label>
-                    <input type="file" name="capa" id="capaId" required>
-                  </div>
-        
-                  <div>
-                    <label>Conteudo</label>
-                    <input type="file" name="conteudo" id="conteudoId" required>
-                  </div>
-                </div>
       
-                <div>
-                  <div>
-                    <div style="width: 95%;">
+
+
                       <label>Anime</label>
                       <input type="text" name="anime" id="animeId" required>
-                    </div>
-                  </div>
-        
-                  <div>
+
+
+
                     <label>Volume</label>
                     <input type="number" name="volume" id="volumeId" required>  
-                  </div>
-                </div>
-      
-                <div>
-                  <div>
-                    <div style="width: 95%;">
+
                       <label>Autor</label>
                       <input type="text" name="autor" id="autorId">            
-                    </div>
-                  </div>
+
         
-                  <div>
                     <label>Categoria</label>
                     <input type="text" name="categoria" id="editoraId">
-                  </div>
-                </div>
-      
-                <div>
-                  <label>Sumario</label>
-                  <textarea name="sumario" rows="8" id="sumarioId"></textarea>
-                </div>
 
-                <div>
-                  <button type="submit">Enviar</button>
+                  <label>Sumário <textarea style="height: 300px;" name="sumario" rows="8" id="sumarioId"></textarea></label>
+
+                  <input class="submit-btn" type="submit" value="Enviar">
                   <div id="notify"><?= isset($_COOKIE['notify']) ? $_COOKIE['notify'] : '' ?></div>
-                </div>
-              </div>
           </form>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 
-    require_once('util/envia-email.php');
+    require_once('util/sendRecoverEmail.php');
     require_once('repository/LoginRepository.php');
 
     date_default_timezone_set('America/Sao_Paulo');
