@@ -106,7 +106,7 @@ header {
 .box-search{
   background-color: #24252a; 
   height: 100%; 
-  width: 85%;
+  width: 230px;
   border-radius: 40px;
 }
 
@@ -133,7 +133,6 @@ header {
   color: white; 
   list-style: none;
   display: flex;
-  margin-left: 24%;
 }
 
 .links a{
@@ -144,7 +143,7 @@ header {
 }
 
 .links li{
-  margin-right: 140px;
+  padding-left: 150px;
   margin-top: 15px;
 }
 

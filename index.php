@@ -29,7 +29,7 @@
                 <?php $qnt = 0; foreach(fnListMangas() as $manga): ?>
                     <div class="caixa-manga5">
                         <div class="capa-manga">
-                            <a href="mangaDetalhe.php?id=<?= $manga->id?>"><img class="cropped" src="<?=$manga->capa?>"></a>
+                            <a href="manga_details.php?id=<?= $manga->id?>"><img class="cropped" src="<?=$manga->capa?>"></a>
                         </div>
                         <div class="item-manga"><?= $manga->titulo?></div>
                         <div class="item-manga">

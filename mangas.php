@@ -17,7 +17,7 @@
 <body> <?php include("navbar.php")?>
 
     <div id="search-bar">
-        <form id="formSearchTitulo" role="search" method="post" action="localiza-manga.php">
+        <form id="formSearchTitulo" role="search" method="post" action="mangaLocalize.php">
             <input id="search-text" type="search" name="titulo" placeholder="Procure pelo nome do mangá">
             <button id="search-btn"><img src="img/lupa.png" width="20px" height="20px" alt=""></button>
         </form>

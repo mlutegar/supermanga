@@ -5,7 +5,6 @@
 <header>
 
     <div class="navbar">
-
         <div class="margin"></div>
 
         <div class="logo-box">
@@ -22,7 +21,7 @@
 
         <div class="search">
             <div class="box-search">
-                <form id="formSearchTitulo" role="search" method="post" action="localiza-manga.php">
+                <form id="formSearchTitulo" role="search" method="post" action="mangaLocalize.php">
                     <input id="searchTitulo" class="search-txt" type="search" name="titulo" placeholder="Faça sua pesquisa" aria-label="Search">
                 </form>
             </div>
@@ -45,7 +44,7 @@
                     <div class="dropdown-content">
                         <ul>
                             <li><a class="logout" href="logout.php">Logout</a></li>
-                            <li><a class="logout" href="create_manga.php">Cadastrar manga</a></li>   
+                            <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='logout' href='create_manga.php'>Cadastrar manga</a></li>" ?>  
                             <li><a class="logout" href="user.php">Páginar usuario</a></li>
                             <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='logout' href='admin.php'>Administrador</a></li>" ?>                                              
                         </ul>
