@@ -15,14 +15,16 @@
 </head>
 <body><?php include('navbar.php'); ?>
 
-    <div class="space">
-        <div class="vitrine_linha">
-            <div class="div2">
-                <div style="margin-left: 35%;">
-                    <img class="cropped-detail" src="<?= $manga->capa ?>">
-                </div>
-            </div>
+    <div class="banner"></div>
 
+    <div style="margin-top: 100px;">
+        <div style="margin-left: 35%;">
+            <img class="cropped-detail" src="<?= $manga->capa ?>">
+        </div>
+    </div>
+
+    <div style="padding: 75px; margin: auto; width: 80%;">
+        <div class="vitrine_linha">
             <div class="div2 detail_info" style="text-align: left;">
                 <p><strong>Nome do Manga:</strong><?= $manga->titulo ?></p><br><hr><br>
                 <p><strong>Anime:</strong> <?= $manga->anime ?></p><br><hr><br>

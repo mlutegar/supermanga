@@ -10,6 +10,10 @@ body{
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 h1{
   color: white;
 }
