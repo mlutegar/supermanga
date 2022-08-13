@@ -14,7 +14,7 @@
         <div class="links-nav">
             <ul class="links">
                 <li><a href="mangas.php">Mangás</a></li>
-                <li><a href="#">Categorias</a></li>
+                <li><a href="categorias.php">Categorias</a></li>
                 <li><a href="message_us.php">Fale conosco</a></li>
             </ul>
         </div>

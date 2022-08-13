@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Formulário Cadastro de Manga</title>
-    <<link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css">
   </head>
 
   <body><?php include("navbar.php");?>
@@ -15,9 +15,10 @@
         <div id="form-rect">
             <form id="create-manga" action="createManga.php" method="post" enctype="multipart/form-data">
             <h1>Cadastrar manga</h1>
-              <div style="width: 100%;">
-                <img src="img/img1.png" id="manga-cover">
-              </div>
+                  <svg width="100%" height="360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Capa" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Capa</text>
+                  </svg>
 
                   <label>Capa <input class="upload-btn" type="file" name="capa" id="capaId" required></label>
                   <label>Manga<input class="upload-btn" type="file" name="conteudo" id="conteudoId" required></label>  

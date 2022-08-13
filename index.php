@@ -33,7 +33,7 @@
                         </div>
                         <div class="item-manga"><?= $manga->titulo?></div>
                         <div class="item-manga">
-                            <a href="<?= $manga->conteudo?>">Baixe aqui</a>
+                            <a style="color: blue;" href="<?= $manga->conteudo?>">Baixe aqui</a>
                         </div>
                     </div>
                 <?php 
@@ -64,7 +64,7 @@
                                 <a href="manga_details.php?id=<?= $manga->id?>"><img class="cropped-lancamentos" src="<?=$manga->capa?>"></a>
                             </div>
                             <div class="item-manga"><?= $manga->titulo?></div>
-                            <div class="item-manga"><a href="<?= $manga->conteudo?>">Baixe aqui</a></div>
+                            <div class="item-manga"><a style="color: blue;" href="<?= $manga->conteudo?>">Baixe aqui</a></div>
                         </div>
                     <?php 
                         $qnt++; 
