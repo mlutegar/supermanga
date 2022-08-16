@@ -18,7 +18,7 @@
   <body><?php include("navbar.php");?>
     <div>
         <div id="form-rect">
-            <form id="create-manga" action="createManga.php" method="post" enctype="multipart/form-data">
+            <form id="editaManga" action="editaManga.php" method="post" enctype="multipart/form-data">
             <h1>Cadastrar manga</h1>
               <div style="width: 100%;">
                 <a href="#" onclick="return confirm ('Deseja realmente trocar a capa?') ? trocarImagem() : '';"><img src="<?= $manga->capa ?>" id="manga-cover"></a>

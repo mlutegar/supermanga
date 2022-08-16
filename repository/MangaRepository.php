@@ -80,20 +80,17 @@
         return null;
     }
 
-    function fnUpdateManga($id, $titulo, $anime, $volume, $autor, $categoria, $sumario, $capa) {
+    function fnUpdateManga($id, $titulo, $anime, $volume, $categoria, $sumario) {
         $con = getConnection();
-        $sql = "update manga set titulo = :pTitulo, anime= :pAnime, volume = :pVolume, autor = :pAutor, categoria = :pCategoria, sumario = :pSumario, capa = :pCapa where id = :pID";
+        $sql = "update manga set titulo = :pTitulo, anime= :pAnime, volume = :pVolume, categoria = :pCategoria, sumario = :pSumario where id = :pID";
         
         $stmt = $con->prepare($sql);
         $stmt->bindParam(":pID", $id);
         $stmt->bindParam(":pTitulo", $titulo);
         $stmt->bindParam(":pAnime", $anime);
         $stmt->bindParam(":pVolume", $volume);
-        $stmt->bindParam(":pAutor", $autor);
         $stmt->bindParam(":pCategoria", $categoria);
         $stmt->bindParam(":pSumario", $sumario);
-        $stmt->bindParam(":pCapa", $capa);
-        $stmt->bindParam(":pConteudo", $conteudo);
 
         return $stmt->execute();
     }
@@ -110,4 +107,13 @@
         return $stmt->execute();
     }
 
-    
+    function fnUpdateNota($nota) {
+        $con = getConnection();
+        $sql = "update manga set nota = :Nota where id = :pID";
+        
+        $stmt = $con->prepare($sql);
+        $stmt->bindParam(":pID", $id);
+        $stmt->bindParam(":Nota", $nota);
+
+        return $stmt->execute();
+    }

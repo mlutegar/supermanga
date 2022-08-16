@@ -25,7 +25,7 @@
                 <div id="manga-information-section">
                     <div id="manga-information">
                         <h1><?= $manga->anime?></h1>
-                        <div id="additional-info"><p id="nota">Nota</p><p id="genero"><?= $manga->anime?></p></div>
+                        <div id="additional-info"><p id="nota"><?= $manga->nota?></p><p id="genero"><?= $manga->anime?></p></div>
                     </div>
                     <p id="sinopse">
                         <?= $manga->sumario?>
