@@ -43,6 +43,30 @@
         }
     } 
 
+    function fnLocalizaMangaPorAnime($anime) {
+        $con = getConnection();
+        $sql = "select * from manga where anime like :pAnime limit 20";
+        $stmt = $con->prepare($sql);
+        $stmt->bindValue(":pAnime", "%{$anime}%");
+
+        if($stmt->execute()) {
+            $stmt->setFetchMode(PDO::FETCH_OBJ);
+            return $stmt->fetchAll();
+        }
+    } 
+
+    function fnLocalizaMangaPorCategoria($categoria) {
+        $con = getConnection();
+        $sql = "select * from manga where categoria like :pCategoria limit 20";
+        $stmt = $con->prepare($sql);
+        $stmt->bindValue(":pCategoria", "%{$categoria}%");
+
+        if($stmt->execute()) {
+            $stmt->setFetchMode(PDO::FETCH_OBJ);
+            return $stmt->fetchAll();
+        }
+    } 
+
     function fnLocalizaMangaPorId($id) {
         $con = getConnection();
         $sql = "select * from manga where id = :pID";
