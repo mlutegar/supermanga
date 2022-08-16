@@ -9,7 +9,7 @@
     define('GUSER', 'joaosorremailsender@gmail.com');
     define("GPWD", 'qexzgfucoflxyvqu'); #mymailsender
 
-    function send($email, $name, $subject, $message){
+    function send($user){
         $mail = new PHPMailer;
         $mail->isSMTP();
         $mail->SMTPDebug = SMTP::DEBUG_OFF;
