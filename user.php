@@ -3,7 +3,7 @@
 include('config.php');
 require_once('repository/LoginRepository.php');
 
-$id = $_SESSION['id'];
+$id = $_SESSION['login']->id;
 $user = fnLocalizaUserPorId($id);
 
 ?>
@@ -19,24 +19,19 @@ $user = fnLocalizaUserPorId($id);
 <body> <?php include("navbar.php")?>
 
     <div class="rect">
-    <fieldset>
-                <div class="card col-4 offset-4 text-center">
-                    <img src="<?= $_SESSION['id']->foto ?>" id="avatarId" class="rounded">
-                </div>
-                <br>
-                <div class="mb-3 form-group">
-                    <label for="userId" class="form-label">User</label>
-                    <input type="text" name="user" id="userId" class="form-control" value="<?=  $_SESSION['id']->user ?>">
-                </div>
-                <br>
-                <div class="mb-3 form-group">
-                    <label for="ageId" class="form-label">Idade</label>
-                    <input type="text" name="age" id="ageId" class="form-control" value="<?=  $_SESSION['id']->age ?>">
-                </div>
-                <a href="edit_user.php">Editar</a>
-                <div id="notify" class="form-text text-capitalize fs-4"><?= isset($_COOKIE['notify']) ? $_COOKIE['notify'] : '' ?></div>
-        </fieldset>
+        <div id="user-photo">
+            <img src="<?=$_SESSION['login']->foto ?>">
+        </div>
+
+        <div id="information-rect">     
+            <p>Nome: <?=$_SESSION['login']->user?></p>  
+            <p>Idade: <?=$_SESSION['login']->age?></p> 
+            <p>Cadastrado desde: <?=$_SESSION['login']->created_at?></p> 
+            <input class="submit-btn" type="button" onclick="window.location='edit_user.php'" value="Editar informações">
+        </div>
     </div>
+
+    <div id="notify" class="form-text text-capitalize fs-4"><?= isset($_COOKIE['notify']) ? $_COOKIE['notify'] : '' ?></div>
 
 <?php include('footer.php') ?></body>
 </html>

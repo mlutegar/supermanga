@@ -3,7 +3,7 @@
 
     function fnLogin($email, $password) {
         $con = getConnection();
-        $sql = "select id, email from login where email = :pEmail and senha = :pSenha";
+        $sql = "select id, created_at, user, foto, age, email from login where email = :pEmail and senha = :pSenha";
         $stmt = $con->prepare($sql);
         $stmt->bindParam(":pEmail", $email);
         $stmt->bindValue(":pSenha", md5($password));
@@ -69,14 +69,13 @@
 
         return false;
     }
-
-    function fnUpdateUser($id, $foto, $age, $user) {
+    function fnUpdateUser($id, $email, $user, $age) {
         $con = getConnection();
-        $sql = "update login set foto = :pFoto, age = :pAge, user = :pUser where id = :pID";
+        $sql = "update login set email = :pEmail, age = :pAge, user = :pUser where id = :pID";
         
         $stmt = $con->prepare($sql);
         $stmt->bindParam(":pID", $id);
-        $stmt->bindParam(":pFoto", $foto);
+        $stmt->bindParam(":pEmail", $email);
         $stmt->bindParam(":pAge", $age);
         $stmt->bindParam(":pUser", $user);
 

@@ -33,7 +33,10 @@
                 <input type="number" name="volume" id="volumeId" value="<?= $manga->volume ?>" required>          
       
                 <label>Categoria</label>
-                <input type="text" name="categoria" id="editoraId" value="<?= $manga->conteudo?>">
+                <input type="text" name="categoria" id="categoriaId" value="<?= $manga->categoria?>">
+
+                <label>Nota</label>
+                <input type="number" name="nota" id="notaId" value="<?= $manga->nota?>">
 
                 <label>Sumário <input style="height: 300px;" name="sumario" rows="8" id="sumarioId" value="<?= $manga->sumario ?>"></label>
 

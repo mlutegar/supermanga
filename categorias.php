@@ -28,7 +28,7 @@
 
     <div class="categoria-acesso">
     
-    <div class="title-categoria">
+        <div class="title-categoria">
             <div class="title">
                 <p>Categorias</p>
             </div>
@@ -38,7 +38,6 @@
             <div class="nome-vitrine">
                 <?php foreach($CategoriaList as $manga): ?>
                     <div class="caixa-categoria">
-                    <div class="categoria-foto">
                     <p><a href="categoria_detail.php?categoria=<?=$manga?>"><?=$manga?></a></p>
                     </div>    
                 </div>

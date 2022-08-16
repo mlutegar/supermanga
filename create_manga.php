@@ -30,7 +30,10 @@
                   <input type="number" name="volume" id="volumeId" required>  
   
                   <label>Categoria</label>
-                  <input type="text" name="categoria" id="editoraId">
+                  <input type="text" name="categoria" id="categoriaId">
+                  
+                  <label>Nota</label>
+                  <input type="number" name="nota" id="notaId">
 
                   <label>Sumário <textarea style="height: 300px;" name="sumario" rows="8" id="sumarioId"></textarea></label>
 

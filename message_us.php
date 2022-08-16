@@ -17,7 +17,7 @@
     <main>
         <div id="form-rect">
 
-            <form method="post" action="sendMessageUsEmail">
+            <form method="post" action="sendMessageUsEmail.php">
                 <p style="font-size: 50px; margin-bottom: 20px;">Fale Conosco</p>
 
                 <label>Nome <br><input type="text" placeholder="Informe o seu nome" name="name" required></label>

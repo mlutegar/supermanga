@@ -6,13 +6,14 @@
     $anime = filter_input(INPUT_POST, 'anime', FILTER_SANITIZE_SPECIAL_CHARS);
     $volume = filter_input(INPUT_POST, 'volume', FILTER_SANITIZE_NUMBER_INT);
     $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);
+    $nota = filter_input(INPUT_POST, 'nota', FILTER_SANITIZE_NUMBER_INT);
     $sumario = filter_input(INPUT_POST, 'sumario', FILTER_SANITIZE_SPECIAL_CHARS);
 
     $titulo = ("{$anime} - Vol.{$volume}");
 
 
 
-    if(fnUpdateManga($id, $titulo, $anime, $volume, $categoria, $sumario)) {
+    if(fnUpdateManga($id, $titulo, $anime, $volume, $categoria, $nota, $sumario)) {
         $msg = "Sucesso ao adicionar o Manga no site";
     } else {
         $msg = "Falha ao adicionar o Manga no site";

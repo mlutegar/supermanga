@@ -1,76 +1,75 @@
 <?php
+
     use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
 
     require_once('vendor/autoload.php');
 
     date_default_timezone_set('America/Sao_Paulo');
 
-    define('GUSER', 'joaosorremailsender@gmail.com');
-    define("GPWD", 'qexzgfucoflxyvqu'); #mymailsender
+    define('GUSER', 'caducando1991@gmail.com');
+    define('GPWD', 'tjauufnreazpcmxb');
 
-    function send($user){
+    function send($email, $name, $subject, $message){
         $mail = new PHPMailer;
-        $mail->isSMTP();
-        $mail->SMTPDebug = SMTP::DEBUG_OFF;
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port = 465;
-        $mail->SMTPAuth = true;
-        $mail->Username = GUSER;
-        $mail->Password = GPWD;
 
-        $mail->setFrom('message-us@playlistshare.com.br', 'PlaylistShare|Admin');
-        $mail->addAddress($user->email);
-        $mail->Subject = 'Message';
+       $mail->isSMTP();
+       $mail->SMTPDebug = 0;
+       $mail->Host = 'smtp.gmail.com';
+       $mail->SMTPSecure = 'tls';
+       $mail->Port = 587;
+       $mail->SMTPAuth = true;
+       $mail->Username = GUSER;
+       $mail->Password = GPWD;
 
-        $mail->msgHTML(messageConstructor($user->password));
-        $mail->AltBody = "Sua nova senha é: {$user->password}";
+       $mail->setFrom($email, $name);
+       $mail->addAddress(GUSER); 
+       $mail->Subject = $user->subject; 
 
-        $response = $mail->send();
+       $mail->msgHTML(constroiMensagem($message));
+       $mail->AltBody = $message;
 
-        if($response){
-            $file = fopen('log_email.log', 'a');
+       $response = $mail->send();
+       if($response)
+       {
+            $log_file = fopen('log_email.log', 'a');
             $date = date('Y-m-d H:i');
-            fwrite($file, "Email enviado:{$user->email} - {$date} \r\n");
-            fclose($file);
-            redirect('sucesso', 'foi gerada uma senha e enviada a seu email');
-        }
+            fwrite($log_file, "Email enviado: {$email} - {$date}\r\n\r\n");
+            fclose($log_file);
+            redirect('success', 'Foi gerado uma nova senha e enviada para seu email');
+       }
 
-        if(!$response){
-            $file = fopen('log_email.log', 'a');
+       if(!$response)
+       {
+            $log_file = fopen('log_email.log', 'a');
             $date = date('Y-m-d H:i');
-            fwrite($file, "{$mail->ErrorInfo}\r\n{$user->email}\r\n{$date}\r\n\r\n");
-            fclose($file);
-            redirect('falha', 'Ocorreu um erro ao recuperar a senha');
-        }
+            fwrite($log_file, "{$mail->ErrorInfo}\r\n{$email}\r\n{$date}\r\n\r\n");
+            fclose($log_file);
+            redirect('danger', 'Ocorreu uma falha ao recuperar a senha');
+       }
     }
 
-    function messageConstructor($pwd){
-        return "<!DOCTYPE html>" 
-        . "<html lang= 'pt-br'>"
-        . "<head>"
-        . "<meta charset='UTF-8'>"
-        . "<meta http-equiv= 'X-UA-Compatible' content='IE=edge'"
-        . "meta name='viewport' content= 'width=device-width, initial-scale=1'"
-        . "<title>Document</title>"
-        . "</head>"
-        ."<body>"
-        . "<h1>Recuperação de senha <strong>PlaylistShare</strong></h1>"
-        . "<div align='center'>"
-        . "<h3>Sua nova senha é: {$pwd}</h3>"
-        . "</div>"
-        ."</body>"
-        ."</html>";
+    function constroiMensagem($senha){
+        return   "<!DOCTYPE html>"
+               . "<html lang='pt-br'>"
+                . "<head>"
+                    . "<meta charset='UTF-8'>"
+                    . "<meta http-equiv='X-UA-Compatible' content='IE=edge'>"
+                    . "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
+                    . "<title>Email fale conosco</title>"
+                . "</head>"
+                . "<body>"
+                    . "<h1>Email enviado do fale conosco</h1>"
+                    . "<div align='center'>"
+                        . "<p>{$message}</p>"
+                    . "</div>"
+                . "</body>"
+                . "</html>";
     }
 
     function redirect($status, $msg){
-        $page = "esqueceu-senha.php";
-
-
-        setcookie('notify', $msg, time() + 1, "/supermanga/{$page}", 'localhost');
-        setcookie('status', $status, time() + 1, "/supermanga/{$page}", 'localhost');
-        header("location: {$page}");
+        setcookie('notify', $msg, time() + 10, "supermanga/message_us.php", 'localhost');
+        setcookie('status', $status, time() + 10, "supermanga/message_us.php", 'localhost');
+        header("location: message_us.php");
         exit;
     }
 ?>
