@@ -3,7 +3,7 @@
 include('config.php');
 require_once('repository/LoginRepository.php');
 
-$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+$id = $_SESSION['id'];
 $user = fnLocalizaUserPorId($id);
 
 ?>
@@ -21,23 +21,19 @@ $user = fnLocalizaUserPorId($id);
     <div class="rect">
     <fieldset>
                 <div class="card col-4 offset-4 text-center">
-                    <img src="<?= $user->foto ?>" id="avatarId" class="rounded">
-                </div>
-                      <div class="mb-3 form-group">
-                    <label for="fotoId" class="form-label">Foto</label>
-                    <input type="file" name="foto" id="fotoId" class="form-control">
-                    <div id="helperFoto" class="form-text">Importe a sua foto de perfil</div>
+                    <img src="<?= $_SESSION['id']->foto ?>" id="avatarId" class="rounded">
                 </div>
                 <br>
                 <div class="mb-3 form-group">
                     <label for="userId" class="form-label">User</label>
-                    <input type="text" name="user" id="userId" class="form-control" value="<?= $user->user ?>">
+                    <input type="text" name="user" id="userId" class="form-control" value="<?=  $_SESSION['id']->user ?>">
                 </div>
                 <br>
                 <div class="mb-3 form-group">
                     <label for="ageId" class="form-label">Idade</label>
-                    <input type="text" name="age" id="ageId" class="form-control" value="<?= $user->age ?>">
+                    <input type="text" name="age" id="ageId" class="form-control" value="<?=  $_SESSION['id']->age ?>">
                 </div>
+                <a href="edit_user.php">Editar</a>
                 <div id="notify" class="form-text text-capitalize fs-4"><?= isset($_COOKIE['notify']) ? $_COOKIE['notify'] : '' ?></div>
         </fieldset>
     </div>
