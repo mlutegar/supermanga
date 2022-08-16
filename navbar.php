@@ -25,13 +25,6 @@
                     <input id="searchTitulo" class="search-txt" type="search" name="titulo" placeholder="Faça sua pesquisa" aria-label="Search">
                 </form>
             </div>
-            <div class="btn-search">
-                <div class="lupa">
-                    <a href="#">    
-                        <img src="img/lupa.png" alt="" width="25" height="25">
-                    </a>
-                </div>    
-            </div>
         </div>
 
         <div class="account">
