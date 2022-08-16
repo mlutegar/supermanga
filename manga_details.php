@@ -31,6 +31,13 @@
                 <p><strong>Volume:</strong> <?= $manga->volume ?></p><br><hr><br>
                 <p><strong>Categoria:</strong> <?= $manga->categoria ?></p><br><hr><br>
                 <p><strong>Sumario:</strong>  <?= $manga->sumario ?></p><br><hr><br>
+                <p><strong>Nota:</strong>  <?= $manga->nota ?></p>
+                    <form action="atualiza_nota.php">
+                        <input type="number">
+                        <button>Atualizar</button>
+                    </form>
+                
+                <hr><br>
 
                 <div class="btt">
             <a href="<?=$manga->conteudo?>">

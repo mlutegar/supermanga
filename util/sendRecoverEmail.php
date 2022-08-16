@@ -67,9 +67,9 @@
     }
 
     function redirect($status, $msg){
-        setcookie('notify', $msg, time() + 10, "supermanga/recover_password.php", 'localhost');
-        setcookie('status', $status, time() + 10, "supermanga/recover_password.php", 'localhost');
-        header("location: recover_password.php");
+        setcookie('notify', $msg, time() + 10, "supermanga/esqueceu-senha.php", 'localhost');
+        setcookie('status', $status, time() + 10, "supermanga/esqueceu-senha.php", 'localhost');
+        header("location: esqueceu-senha.php");
         exit;
     }
 ?>
