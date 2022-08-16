@@ -26,47 +26,25 @@
 </head>
 <body><?php include("navbar.php")?>
 
-    <div class="banner"></div>
-
     <div class="categoria-acesso">
     
     <div class="title-categoria">
             <div class="title">
-                <p>Animes</p>
+                <p>Categorias</p>
             </div>
         </div>
 
         <div class="nome-manga">
             <div class="nome-vitrine">
-                <?php foreach($animesList as $manga): ?>
+                <?php foreach($CategoriaList as $manga): ?>
                     <div class="caixa-categoria">
                     <div class="categoria-foto">
-                    <a href="anime_detail.php?anime=<?=$manga?>"><img class="cropped" src="<?=$manga->capa?>"></a>
-                    <p><?=$manga?></p>
+                    <p><a href="categoria_detail.php?categoria=<?=$manga?>"><?=$manga?></a></p>
                     </div>    
                 </div>
                 <?php endforeach;?>
             </div>
         </div>
-
-        <br><br>
-        
-        <div class="tipo-categoria">
-            
-        <div class="title-categoria">
-            <div class="title">
-                <p>Tipo de anime</p>
-            </div>
-        </div>
-
-        <div class="nome-manga">
-            <ul>
-                <?php foreach($CategoriaList as $manga): ?>
-                    <li><a href="categoria_detail.php?categoria=<?=$manga?>"><?=$manga?></a></li>
-                <?php endforeach;?>
-            </ul>
-        </div>
-    </div>
 
 <?php include('footer.php')?></body>
 </html>
