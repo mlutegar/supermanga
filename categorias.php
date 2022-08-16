@@ -1,6 +1,17 @@
 <?php 
     include('config.php');
     require_once('repository/MangaRepository.php');
+
+    $animesList = [];
+    $CategoriaList = [];
+
+    foreach(fnListMangas() as $manga):             
+        array_push($animesList, $manga->anime);
+        array_push($CategoriaList, $manga->categoria);
+    endforeach;
+
+    $animesList = array_unique($animesList);
+    $CategoriaList = array_unique($CategoriaList);
 ?>
 
 <!DOCTYPE html>
@@ -10,25 +21,53 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/categoria.css">
     <title>Página principal</title>
 </head>
 <body><?php include("navbar.php")?>
 
     <div class="banner"></div>
 
-    <div style="padding: 75px; margin: auto; width: 80%; color: white;">
-        <h3>Animes</h3>
+    <div class="categoria-acesso">
+    
+    <div class="title-categoria">
+            <div class="title">
+                <p>Animes</p>
+            </div>
+        </div>
+
+        <div class="nome-manga">
+            <div class="nome-vitrine">
+                <?php foreach($animesList as $manga): ?>
+                    <div class="caixa-categoria">
+                    <div class="categoria-foto">
+                    <a href="anime_detail.php?anime=<?=$manga?>"><img class="cropped" src="<?=$manga->capa?>"></a>
+                    <p><?=$manga?></p>
+                    </div>    
+                </div>
+                <?php endforeach;?>
+            </div>
+        </div>
+
+        <br><br>
+        
+        <div class="tipo-categoria">
+            
+        <div class="title-categoria">
+            <div class="title">
+                <p>Tipo de anime</p>
+            </div>
+        </div>
+
+        <div class="nome-manga">
             <ul>
-                <li><a href="anime.php">Naruto</a></li>
-                <li><a href="anime.php">One Piece</a></li>
+                <?php foreach($CategoriaList as $manga): ?>
+                    <li><a href="categoria_detail.php?categoria=<?=$manga?>"><?=$manga?></a></li>
+                <?php endforeach;?>
             </ul>
-        <h3>Tipo de anime</h3>
-            <ul>
-                <li><a href="anime_type">Seinen</a></li>
-                <li><a href="anime_type">Esporte</a></li>
-                <li><a href="anime_type">Sounen</a></li>
-            </ul>
+        </div>
     </div>
 
 <?php include('footer.php')?></body>
 </html>
+
