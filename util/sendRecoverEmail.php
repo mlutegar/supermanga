@@ -65,7 +65,7 @@
     }
 
     function redirect($status, $msg){
-        $page = "esqueceu-senha.php";
+        $page = "recover_password.php";
 
 
         setcookie('notify', $msg, time() + 1, "/supermanga/{$page}", 'localhost');
