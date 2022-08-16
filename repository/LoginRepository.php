@@ -69,3 +69,16 @@
 
         return false;
     }
+
+    function fnUpdateUser($id, $foto, $age, $user) {
+        $con = getConnection();
+        $sql = "update login set foto = :pFoto, age = :pAge, user = :pUser where id = :pID";
+        
+        $stmt = $con->prepare($sql);
+        $stmt->bindParam(":pID", $id);
+        $stmt->bindParam(":pFoto", $foto);
+        $stmt->bindParam(":pAge", $age);
+        $stmt->bindParam(":pUser", $user);
+
+        return $stmt->execute();
+    }
