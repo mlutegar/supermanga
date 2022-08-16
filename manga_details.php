@@ -39,7 +39,8 @@
                 <hr><br>
 
                 <div class="btt">
-            <input type="button" class="submit-btn" onclick="window.location='<?=$manga->conteudo?>'" value="BAIXE AQUI">
+        
+            <a href="<?= $manga->conteudo ?>" class="submit-btn" download>BAIXE AQUi</a>
         </a>
         </div>
             </div>

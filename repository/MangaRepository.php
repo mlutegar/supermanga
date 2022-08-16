@@ -1,15 +1,14 @@
 <?php
     require_once('Connection.php');
 
-    function fnAddManga($titulo, $anime, $volume, $autor, $categoria, $nota, $sumario, $capa, $conteudo){
+    function fnAddManga($titulo, $anime, $volume,$categoria, $nota, $sumario, $capa, $conteudo){
         $con = getConnection();
-        $sql = "insert into manga (titulo, anime, volume, autor, categoria, nota, sumario, capa, conteudo) values (:pTitulo, :pAnime, :pVolume, :pAutor, :pCategoria, :pNota, :pSumario, :pCapa, :pConteudo)";
+        $sql = "insert into manga (titulo, anime, volume,categoria, nota, sumario, capa, conteudo) values (:pTitulo, :pAnime, :pVolume, :pCategoria, :pNota, :pSumario, :pCapa, :pConteudo)";
         $stmt = $con->prepare($sql);
 
         $stmt->bindParam(":pTitulo", $titulo);
         $stmt->bindParam(":pAnime", $anime);
         $stmt->bindParam(":pVolume", $volume);
-        $stmt->bindParam(":pAutor", $autor);
         $stmt->bindParam(":pCategoria", $categoria);
         $stmt->bindParam(":pNota", $nota);
         $stmt->bindParam(":pSumario", $sumario);
