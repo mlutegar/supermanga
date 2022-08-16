@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Página principal</title>
 </head>
+
 <body> <?php include("navbar.php")?>
 
     <div class="banner"></div>
