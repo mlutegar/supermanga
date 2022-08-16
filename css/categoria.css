@@ -38,16 +38,19 @@
 }
 
 .nome-vitrine{
-    height: 300px;
+    height: 500px;
     display: flex;
     flex-flow: row wrap;
 }
 
 .caixa-categoria{
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid black;
     margin-top: 30px;
-    width: 15%;
-    height: 290px;
+    height: fit-content;
     margin-left: 5%;
+    background-color: #353535;
 }
 
 .categoria-foto{

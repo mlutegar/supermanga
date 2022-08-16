@@ -6,6 +6,7 @@
 body{
     width:100%;
     background-color: #24252a;
+    overflow-x: hidden;
     
 }
 
@@ -44,33 +45,72 @@ body{
     font-size: 20px;
 }
 
-
 #mangas{
+    width: 90%;
+    margin: auto;
+}
+
+#card-manga{
+    display: flex;
     background-color: #838383;
     border-radius: 0px 8px 8px 8px;
     box-shadow: 6px 10px 14px -2px #000;
     padding: 20px;
-    width: 70%;
+    width: 100%;
     margin: auto;
     margin-top: 60px;
-    display:flex;
     font-size: 13px;
     color: #edf0f1;
     font-family: "Montserrat", sans-serif;
 }
 
+#manga-cover-container{
+    display: block;
+    float: left;
+    width: 19%;
+    height: 300px;
+    margin: auto;
+}
+
 #manga-cover{
-background-size:cover;
-background-position: center;
-float: left;
-width: 20%;
-height: 300px;
-padding: 0 20px;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    background-size:cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 0 20px;
+}
+
+#manga-cover-above-container{
+    margin: 0 auto;
+    margin-top: 90px;
+    width: 60%;
+    height: 350px;
+    background-color: #838383;
+    border-radius: 0px 8px 8px 8px;
+    box-shadow: 6px 10px 14px -2px #000;
+}
+
+#manga-above-cover{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    background-size:cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#manga-above-cover:hover{
+    border: 2px solid blue;
 }
 
 #manga-information-section{
 float: right;
-width: 69%;
+width: 79%;
+margin-left: 20px;
 }
 
 #manga-information h1{
@@ -78,7 +118,13 @@ width: 69%;
  color: black;
 }
 
+#manga-information h1:hover{
+    color: blue;
+}
+
 #sinopse{
+    text-align: justify;
+    overflow-wrap: break-word;
     color: black;
     font-family: "Montserrat", sans-serif;
 }
@@ -104,6 +150,10 @@ width: 69%;
     background-color: white;
 }
 
+#manga-cover:hover{
+    border: blue solid 2px;
+}
+
 .cropped-vitrine{
     width: 200px; 
     height: 280px; 
@@ -113,4 +163,54 @@ width: 69%;
 
 #card-manga{
     width: 100%;
+}
+
+@media only screen and (max-width: 1115px) {
+
+    #manga-cover-container{
+        width: 39%;
+    }
+
+    #manga-information-section{
+        width: 69%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #manga-cover-container{
+        width: 49%;
+    }
+
+    #manga-information-section{
+        width: 49%;
+    }
+
+}
+
+@media only screen and (max-width: 539px) {
+
+    #manga-cover-above-container{
+        display: flex !important;
+    }
+
+    #manga-cover-container{
+        display: none;
+    }
+
+    #manga-information-section{
+        width: 90%;
+    }
+
+    #card-manga{
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 379px) {
+
+    #manga-cover-above-container{
+        width: 90%;
+    }
+
 }

@@ -16,17 +16,17 @@
 
 <body> <?php include("navbar.php")?>
 
+<div id="mangas">  
     <?php foreach(fnLocalizaMangaPorCategoria($categoria) as $manga): ?>
-        <div id="mangas">            
+        <div id="manga-cover-above-container" style="display: none;"><div id="manga-above-cover" style="background-image: url('<?= $manga->capa?>')"></div></div>  
             <div id="card-manga">
-                <div id="manga-cover">
-                    <a href="manga_details.php?id=<?= $manga->id?>"><img class="cropped-vitrine" src="<?= $manga->capa?>" alt=""></a>
-                </div>
+                <div onclick="window.location.href = 'manga_details.php?id=<?= $manga->id ?>'" id="manga-cover-container"><div id="manga-cover" style="background-image: url('<?= $manga->capa?>')"></div></div>
+
                 <div id="manga-information-section">
                     <div id="manga-information">
-                        <h1><?= $manga->titulo?></h1>
+                        <h1 onclick="window.location.href = 'manga_details.php?id=<?= $manga->id ?>'"><?= $manga->titulo?></h1>
                         <div id="additional-info"><p id="nota"><?= $manga->nota?></p><p id="genero"><?= $manga->categoria?></p></div>
-                    </div>
+              
                     <p id="sinopse">
                         <?= $manga->sumario?>
                     </p>
@@ -34,6 +34,7 @@
             </div>
         </div>
     <?php endforeach; ?>
+</div>
     
 <?php include('footer.php')?></body>
 

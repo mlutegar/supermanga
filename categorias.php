@@ -29,9 +29,7 @@
     <div class="categoria-acesso">
     
         <div class="title-categoria">
-            <div class="title">
                 <p>Categorias</p>
-            </div>
         </div>
 
         <div class="nome-manga">
@@ -40,7 +38,6 @@
                     <div class="caixa-categoria">
                     <p><a href="categoria_detail.php?categoria=<?=$manga?>"><?=$manga?></a></p>
                     </div>    
-                </div>
                 <?php endforeach;?>
             </div>
         </div>

@@ -46,7 +46,7 @@
                             <li><a class="logout" href="logout.php">Logout</a></li>
                             <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='logout' href='create_manga.php'>Cadastrar manga</a></li>" ?>  
                             <li><a class="logout" href="user.php">Páginar usuario</a></li>
-                            <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='logout' href='admin.php'>Administrador</a></li>" ?>                                              
+                            <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='logout' href='admin_list.php'>Administrador</a></li>" ?>                                              
                         </ul>
                     </div>
                 </div>
