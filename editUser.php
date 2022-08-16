@@ -8,10 +8,16 @@
     $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_NUMBER_INT);
 
     $id = $_SESSION['login']->id;
-    if(fnUpdateUser($id, $email, $user, $age)) {
-        $msg = "Sucesso ao gravar";
-    } else {
-        $msg = "Falha na gravação";
+
+    if(empty($email) || empty($user) || empty($age) || empty($id)){
+        $msg = "Preencher todos os campos primeiro.";
+    }
+    else{
+        if(fnUpdateUser($id, $email, $user, $age)) {
+            $msg = "Sucesso ao gravar";
+        } else {
+            $msg = "Falha na gravação";
+        }
     }
     
     $page = "edit_user.php";

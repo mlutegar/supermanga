@@ -27,19 +27,19 @@ require_once('repository/loginrepository.php');
             <form action="createAccount.php" method="post" id="form">
                 <div>
                     <label for="emailId" class="form-label">E-mail</label>
-                    <input type="email" name="email" id="emailId" class="form-control" placeholder="Informe o e-mail">
+                    <input type="email" name="email" id="emailId" class="form-control" placeholder="Informe o e-mail" required>
                 </div>
                 <div>
                     <label for="senhaId" class="form-label">Usuário</label>
-                    <input type="text" name="user" id="userId" class="form-control" placeholder="Informe o seu nome de usúario">
+                    <input type="text" name="user" id="userId" class="form-control" placeholder="Informe o seu nome de usúario" required>
                 </div>
                 <div>
                     <label for="ageId" class="form-label">Idade</label>
-                    <input type="text" name="age" id="ageId" class="form-control" placeholder="Informe a sua idade">
+                    <input type="text" name="age" id="ageId" class="form-control" placeholder="Informe a sua idade" required>
                 </div>
                 <div>
                     <label for="senhaId" class="form-label">Senha</label>
-                    <input type="password" name="senha" id="senhaId" class="form-control" placeholder="Informe a senha">
+                    <input type="password" name="senha" id="senhaId" class="form-control" placeholder="Informe a senha" required>
                 </div>
  
                 <div>

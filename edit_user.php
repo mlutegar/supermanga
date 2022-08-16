@@ -25,15 +25,15 @@ $user = fnLocalizaUserPorId($id);
             <form action="editUser.php" method="post" class="form" enctype="multipart/form-data">
             <div>
                     <label for="emailId" class="form-label">E-mail</label>
-                    <input type="email" name="email" id="emailId" class="form-control" placeholder="<?= $_SESSION['login']->email?>">
+                    <input type="email" name="email" id="emailId" class="form-control" placeholder="<?= $_SESSION['login']->email?>" required>
                 </div>
                 <div>
                     <label for="senhaId" class="form-label">Usuário</label>
-                    <input type="text" name="user" id="userId" class="form-control" placeholder="<?= $_SESSION['login']->user?>">
+                    <input type="text" name="user" id="userId" class="form-control" placeholder="<?= $_SESSION['login']->user?>" required>
                 </div>
                 <div>
                     <label for="ageId" class="form-label">Idade</label>
-                    <input type="text" name="age" id="ageId" class="form-control" placeholder="<?= $_SESSION['login']->age?>">
+                    <input type="text" name="age" id="ageId" class="form-control" placeholder="<?= $_SESSION['login']->age?>" required>
                 </div>
  
                 <div>
