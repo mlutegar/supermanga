@@ -5,7 +5,7 @@
     margin-top: 60px;
     display: flexbox;
     font-size: 30px;
-    background-color:  #838383;
+    background-color:  #d1ebf7;
     font-family: "Montserrat", sans-serif;
     border-radius: 0px 8px 8px 8px;
     box-shadow: 6px 10px 14px -2px #000;
@@ -24,7 +24,7 @@
     height: fit-content;
 }
 .submit-btn:hover{
-    background-color: #878c94;
+    background-color: black;
 }
 
 #form-rect input, #my-text{

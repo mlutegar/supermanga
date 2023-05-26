@@ -8,7 +8,7 @@
         <div class="margin"></div>
 
         <div class="logo-box">
-            <a class="logo" href="index.php"><img src="img/logo.png" alt="logo"> </a>
+            <a class="logo" href="index.php"><img src="img/aniplex logo.png" alt="logo"> </a>
         </div>
 
         <div class="links-nav">

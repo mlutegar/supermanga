@@ -11,7 +11,7 @@
 }
 
 .title{
-    background-color: #353535;
+    background-color: #d1ebf7;
     width: 14%;
     height: 100%;
     box-shadow: 8px 0px 8px -2px #000;
@@ -22,14 +22,14 @@
 .title p{
     font-size: 18px;
     padding: 12px;
-    color: #edf0f1;
+    color: black;
     position: relative;
     font-family: "Montserrat", sans-serif;
     text-align: center;
 }
 
 .nome-manga{
-    background-color: #838383;
+    background-color: #d1ebf7;
     width: 92%;
     height: 85%;
     border-radius: 0px 8px 8px 8px;

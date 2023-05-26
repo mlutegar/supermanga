@@ -24,12 +24,15 @@
     <link rel="stylesheet" href="css/categoria.css">
     <title>Página principal</title>
 </head>
-<body><?php include("navbar.php")?>
+<body>
+    <?php include("navbar.php")?>
 
     <div class="categoria-acesso">
     
         <div class="title-categoria">
+            <div class="title">
                 <p>Categorias</p>
+            </div>
         </div>
 
         <div class="nome-manga">
@@ -41,6 +44,7 @@
                 <?php endforeach;?>
             </div>
         </div>
+    </div>
 
 <?php include('footer.php')?></body>
 </html>

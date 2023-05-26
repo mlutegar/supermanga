@@ -1,6 +1,6 @@
 body{
     width:100%;
-    background-color: #24252a;
+    background-color: #696969;
     color: white
 }
 
@@ -103,7 +103,7 @@ h1{
     text-align: center;
   }
   .footer{
-    background-color: #494a4f;
+    background-color: #d1ebf7;
     height: 120px;
     width: 100%;
     top: 130%;

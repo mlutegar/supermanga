@@ -23,7 +23,7 @@
 
        $mail->setFrom($email, $name);
        $mail->addAddress(GUSER); 
-       $mail->Subject = $user->subject; 
+       $mail->Subject = $email->subject; 
 
        $mail->msgHTML(constroiMensagem($message));
        $mail->AltBody = $message;
@@ -60,7 +60,7 @@
                 . "<body>"
                     . "<h1>Email enviado do fale conosco</h1>"
                     . "<div align='center'>"
-                        . "<p>{$message}</p>"
+                        . "<p>{$senha}</p>"
                     . "</div>"
                 . "</body>"
                 . "</html>";

@@ -1,5 +1,5 @@
-create database if not exists supermanga;
-use supermanga;
+create database if not exists aniplex;
+use aniplex;
 
 create or replace table login(
     id int primary key auto_increment,

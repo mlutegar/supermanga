@@ -3,20 +3,20 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  background-color: #24252a;
+  background-color: #d1ebf7;
   width: 100%;
 }
   
 .logo {
   position: relative;
   left: 0px;
+  bottom: 15px;
   cursor: pointer;
-
 } 
 
 .logo img{
   width: 100px;
-  height: 50px;
+  height: 100px;
 }
 
 .iconlogin{
@@ -104,7 +104,7 @@ header {
 }
 
 .box-search{
-  background-color: #24252a; 
+  background-color: #d1ebf7; 
   height: 100%; 
   width: 230px;
   border-radius: 40px;
@@ -130,14 +130,14 @@ header {
 }
 
 .links{
-  color: white; 
+  color: black; 
   list-style: none;
   display: flex;
 }
 
 .links a{
   text-decoration: none;
-  color: white; 
+  color: black; 
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
